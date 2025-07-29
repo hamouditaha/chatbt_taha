@@ -1,0 +1,7 @@
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^0.13.4
+  flutter_dotenv: ^5.0.2
+  provider: ^6.0.3
+  flutter_markdown: ^0.6.13

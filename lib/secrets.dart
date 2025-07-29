@@ -1,0 +1,1 @@
+const String openAIKey = 'sk-votre-cle-api-openai';
