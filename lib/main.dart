@@ -1,8 +1,10 @@
+
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:provider/provider.dart';
 import 'providers/chat_provider.dart';
 import 'screens/chat_screen.dart';
+import 'screens/login_page.dart'; // Ajouté depuis votre code
 
 Future<void> main() async {
   await dotenv.load(fileName: ".env");
@@ -17,12 +19,13 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (_) => ChatProvider(),
       child: MaterialApp(
-        title: 'ChatGPT Flutter',
+        title: 'ChatGPT + Gemini Fusion',
         theme: ThemeData(
           primarySwatch: Colors.blue,
           useMaterial3: true,
         ),
-        home: const ChatScreen(),
+        home: const LoginPage(), // Utilisez votre page de login
+        debugShowCheckedModeBanner: false,
       ),
     );
   }
